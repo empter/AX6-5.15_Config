@@ -53,6 +53,8 @@ jobs:
         sudo timedatectl set-timezone "$TZ"
         sudo mkdir -p /workdir
         sudo chown $USER:$GROUPS /workdir
+        export GO111MODULE=on
+        export GOPROXY=https://goproxy.io
 
     - name: Clone source code
       working-directory: /workdir
